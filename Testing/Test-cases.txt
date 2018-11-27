@@ -1,0 +1,91 @@
+(!) Зайти на сайт https://airalgerie.dz
+
+(*) Форма для заказа билета:
+	Выбираем раздел Reserve
+	В разделе Aeroport de depart выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим Alger.
+	choose the classe of aircraft "Economic"
+	Выбираем дату вылета "Today + 5 days" (+)
+	Выбираем дату прилета "(+) + 10 days"
+	Choose the count of Adultes (1 - 9)
+	Choose the count of enfants(0-8)
+	Choose the count of Babies(0- 1)
+	click Reserve
+1.
+1. test case title
+	Возможность забронировать билет на прошедшую дату 
+2. steps to verify
+	Выбираем раздел Reserve
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим Alger.
+	Выбираем прошедшую дату "Today - 5 days".
+	Нажимаем кнопку "Searsh" 
+3. expected results	
+	Перенаправление на другую страницу и выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
+
+2.
+1. test case title
+	Проверка возможности выбора максимального числа детей и младенцев на 1 взрослого
+2. steps to verify
+	Заполняем форму для заказа билета (*) 
+	Выбираем 1 взрослого, 8 детей и 8 младенцев
+	Нажимаем кнопку "Search" 
+3. expected results
+	выдача сообщения "For safety reasons onboard, the number of infants travelling cannot exceed the number of adults."
+
+
+3.
+1. test case title
+	Проверка возможности выбора даты прибытия, раньше даты вылета
+2. steps to verify
+	Заполняем форму для заказа билета (*)
+	Выбираем дату отправления "Today"
+	Выбираем дату прибытия "Today - 3 days"
+	Нажимаем кнопку "Search" 
+3. expected results
+	выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
+
+4.
+1. test case title
+	Проверка возможности ввода в поле "To" символы и цифры (корректность данных)
+2. steps to verify
+	Заполняем форму для заказа билета (*)
+	В поле "To" вводим "123671%"!"№"
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "Please add the destination you're travelling 'To'."	
+
+
+5.
+1. test case title
+	Проверка возможности бронирования билета, не выбирая количество путешественников
+2. steps to verify
+	Заполняем форму для заказа билета (*)
+	При выборе кол-ва людей, для взрослого "Adult" + others ставим 0 значение
+3. expected results
+	Выдача сообщения "There must be at least one adult per booking for online bookings. To book for young adults travelling alone, please "		
+
+
+1. test case title	
+	Проверка возможности бронирования билета для путешествия ребенка до 8 лет без сопровождения взрослого
+2. steps to verify
+	Заполняем форму для заказа билета (*)
+	В поле "Adults" указываем значение "0"
+	В поле "Children" указываем значение возраста "8" 
+	Нажимаем кнопку "Search"
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "To book a flight online there must be at least one adult passenger travelling."	
+
+
+8.
+1. test case title
+	Бронирование билета from USA, New York to Alger 
+2. steps to verify
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим "Alger"
+	Выбираем дату вылета "17.11.18"
+	Выбираем дату прилета "27.11.18"	
+3. expected results
+	Перенаправление на другую страницу и показ доступных полётов.
+
